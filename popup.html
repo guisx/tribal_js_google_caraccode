@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Accents en HTML</title>
+    <style type="text/css">
+        table { 
+            border:1px solid #1a1a1a; 
+            font-family: Helvetica, Arial;
+            border-collapse:collapse;
+            width:auto;
+            width:100%;
+            text-align:center;
+        }
+        table,th, td { border:1px solid #1a1a1a; }
+        th, td { height: 24px; padding:4px; vertical-align:middle; }
+        th { background:#333;color:#fff; }  
+        input { width:80px;}
+        .accordion, .accordion * {
+            -webkit-box-sizing:border-box; 
+            -moz-box-sizing:border-box; 
+            box-sizing:border-box;
+        }
+        .accordion {
+            overflow:hidden;
+            box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+            border-radius:3px;
+            background:#f7f7f7;
+        }
+        .accordion-section-title {
+            width:450px;
+            padding:15px;
+            display:inline-block;
+            border-bottom:1px solid #1a1a1a;
+            background:#333;
+            transition:all linear 0.15s;
+            font-size:1.200em;
+            text-shadow:0px 1px 0px #1a1a1a;
+            color:#fff;
+        }
+        .accordion-section-title.active, .accordion-section-title:hover { background:#4c4c4c;text-decoration:none; }
+        .accordion-section:last-child .accordion-section-title { border-bottom:none; }
+        .accordion-section-content { padding:15px;display:none; }
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+<div class="accordion">
+    <div class="accordion-section">
+        <a class="accordion-section-title" href="#accordion-1">Lettre A</a>
+        <div id="accordion-1" class="accordion-section-content">
+            <table align="center">
+                <thead>   
+                    <tr>
+                        <th>Nom de l'accent</th><th>Lettre</th><th>HTML</th><th>Copier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>a accent grave</td><td>à</td><td><input type="text" id="textcopy1" value="&amp;agrave;"></td>
+                        <td><button class="copy" data-id="1">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>A accent grave</td><td>À</td><td><input type="text" id="textcopy2" value="&amp;Agrave;"></td>
+                        <td><button class="copy" data-id="2">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>a accent aigu</td><td>á</td><td><input type="text" id="textcopy3" value="&amp;aacute;"></td>
+                        <td><button class="copy" data-id="3">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>A accent aigu</td><td>Á</td><td><input type="text" id="textcopy4" value="&amp;Aacute;"></td>
+                        <td><button class="copy" data-id="4">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>a accent circonflexe</td><td>â</td><td><input type="text" id="textcopy5" value="&amp;acirc;"></td>
+                        <td><button class="copy" data-id="5">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>A accent circonflexe</td><td>Â</td><td><input type="text" id="textcopy6" value="&amp;Acirc;"></td>
+                        <td><button class="copy" data-id="6">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>a tilde</td><td>ã</td><td><input type="text" id="textcopy7" value="&amp;atilde;"></td>
+                        <td><button class="copy" data-id="7">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>A tilde</td><td>Ã</td><td><input type="text" id="textcopy8" value="&amp;Atilde;"></td>
+                        <td><button class="copy" data-id="8">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>a tréma</td><td>ä</td><td><input type="text" id="textcopy9" value="&amp;auml;"></td>
+                        <td><button class="copy" data-id="9">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>A tréma</td><td>Ä</td><td><input type="text" id="textcopy10" value="&amp;Auml;"></td>
+                        <td><button class="copy" data-id="10">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>a rond </td><td>å</td><td><input type="text" id="textcopy11" value="&amp;aring;"></td>
+                        <td><button class="copy" data-id="11">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>A rond</td><td>Å</td><td><input type="text" id="textcopy12" value="&amp;Aring;"></td>
+                        <td><button class="copy" data-id="12">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>ae ligaturé</td><td>æ</td><td><input type="text" id="textcopy13" value="&amp;aelig;"></td>
+                        <td><button class="copy" data-id="13">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>AE ligaturé</td><td>Æ</td><td><input type="text" id="textcopy14" value="&amp;AElig;"></td>
+                        <td><button class="copy" data-id="14">Copier</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!--end .accordion-section-content-->
+    </div><!--end .accordion-section-->
+<!--======================================================================================
+==========================================================================================
+=======================================================================================-->
+    <div class="accordion-section">
+        <a class="accordion-section-title" href="#accordion-2">Lettre E</a>
+        <div id="accordion-2" class="accordion-section-content">
+            <table align="center">
+                <thead>   
+                    <tr>
+                        <th>Nom de l'accent</th><th>Lettre</th><th>HTML</th><th>Copier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>e accent grave</td><td>è</td><td><input type="text" id="textcopy15" value="&amp;egrave;"></td>
+                        <td><button class="copy" data-id="15">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>E accent grave</td><td>È</td><td><input type="text" id="textcopy16" value="&amp;Egrave;"></td>
+                        <td><button class="copy" data-id="16">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>e accent aigu</td><td>é</td><td><input type="text" id="textcopy17" value="&amp;eacute;"></td>
+                        <td><button class="copy" data-id="17">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>E accent aigu</td><td>É</td><td><input type="text" id="textcopy18" value="&amp;Eacute;"></td>
+                        <td><button class="copy" data-id="18">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>e accent circonflexe</td><td>ê</td><td><input type="text" id="textcopy19" value="&amp;ecirc;"></td>
+                        <td><button class="copy" data-id="19">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>E accent circonflexe</td><td>Ê</td><td><input type="text" id="textcopy20" value="&amp;Ecirc;"></td>
+                        <td><button class="copy" data-id="20">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>e tréma</td><td>ë</td><td><input type="text" id="textcopy21" value="&amp;euml;"></td>
+                        <td><button class="copy" data-id="21">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>E tréma</td><td>Ë</td><td><input type="text" id="textcopy22" value="&amp;Euml;"></td>
+                        <td><button class="copy" data-id="22">Copier</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!--end .accordion-section-content-->
+    </div><!--end .accordion-section-->
+<!--======================================================================================
+==========================================================================================
+=======================================================================================-->
+    <div class="accordion-section">
+        <a class="accordion-section-title" href="#accordion-3">Lettre I</a>
+        <div id="accordion-3" class="accordion-section-content">
+            <table align="center">
+                <thead> 
+                    <tr>
+                        <th>Nom de l'accent</th><th>Lettre</th><th>HTML</th><th>Copier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>i accent grave</td><td>ì</td><td><input type="text" id="textcopy23" value="&amp;igrave;"></td>
+                        <td><button class="copy" data-id="23">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>I accent grave</td><td>Ì</td><td><input type="text" id="textcopy24" value="&amp;Igrave;"></td>
+                        <td><button class="copy" data-id="24">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>i accent aigu</td><td>í</td><td><input type="text" id="textcopy25" value="&amp;iacute;"></td>
+                        <td><button class="copy" data-id="25">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>I accent aigu</td><td>Í</td><td><input type="text" id="textcopy26" value="&amp;Iacute;"></td>
+                        <td><button class="copy" data-id="26">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>i accent circonflexe</td><td>î</td><td><input type="text" id="textcopy27" value="&amp;icirc;"></td>
+                        <td><button class="copy" data-id="27">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>I accent circonflexe</td><td>Î</td><td><input type="text" id="textcopy28" value="&amp;Icirc;"></td>
+                        <td><button class="copy" data-id="28">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>i tréma </td><td>ï</td><td><input type="text" id="textcopy29" value="&amp;iuml;"></td>
+                        <td><button class="copy" data-id="29">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>I tréma</td><td>Ï</td><td><input type="text" id="textcopy30" value="&amp;Iuml;"></td>
+                        <td><button class="copy" data-id="30">Copier</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!--end .accordion-section-content-->
+    </div><!--end .accordion-section-->
+<!--======================================================================================
+==========================================================================================
+=======================================================================================-->
+    <div class="accordion-section">
+        <a class="accordion-section-title" href="#accordion-4">Lettre O</a>
+        <div id="accordion-4" class="accordion-section-content">
+            <table align="center">
+                <thead>  
+                    <tr>
+                        <th>Nom de l'accent</th><th>Lettre</th><th>HTML</th><th>Copier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>o accent grave</td><td>ò</td><td><input type="text" id="textcopy31" value="&amp;ograve;"></td>
+                        <td><button class="copy" data-id="31">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>O accent grave</td><td>Ò</td><td><input type="text" id="textcopy32" value="&amp;Ograve;"></td>
+                        <td><button class="copy" data-id="32">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>o accent aigu</td><td>ó</td><td><input type="text" id="textcopy33" value="&amp;oacute;"></td>
+                        <td><button class="copy" data-id="33">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>O accent aigu</td><td>Ó</td><td><input type="text" id="textcopy34" value="&amp;Oacute;"></td>
+                        <td><button class="copy" data-id="34">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>o accent circonflexe</td><td>ô</td><td><input type="text" id="textcopy35" value="&amp;ocirc;"></td>
+                        <td><button class="copy" data-id="35">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>O accent circonflexe</td><td>Ô</td><td><input type="text" id="textcopy36" value="&amp;Ocirc;"></td>
+                        <td><button class="copy" data-id="36">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>o tilde</td><td>õ</td><td><input type="text" id="textcopy37" value="&amp;otilde;"></td>
+                        <td><button class="copy" data-id="37">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>O tilde</td><td>Õ</td><td><input type="text" id="textcopy38" value="&amp;Otilde;"></td>
+                        <td><button class="copy" data-id="38">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>o tréma</td><td>ö</td><td><input type="text" id="textcopy39" value="&amp;ouml;"></td>
+                        <td><button class="copy" data-id="39">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>O tréma</td><td>Ö</td><td><input type="text" id="textcopy40" value="&amp;Ouml;"></td>
+                        <td><button class="copy" data-id="40">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>o barré</td><td>ø</td><td><input type="text" id="textcopy41" value="&amp;oslash;"></td>
+                        <td><button class="copy" data-id="41">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>O barré</td><td>Ø</td><td><input type="text" id="textcopy42" value="&amp;Oslash;"></td>
+                        <td><button class="copy" data-id="42">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>o e minuscule liés</td><td>œ</td><td><input type="text" id="textcopy43" value="&amp;oelig;"></td>
+                        <td><button class="copy" data-id="43">Copier</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!--end .accordion-section-content-->
+    </div><!--end .accordion-section-->
+<!--======================================================================================
+==========================================================================================
+=======================================================================================-->
+    <div class="accordion-section">
+        <a class="accordion-section-title" href="#accordion-5">Lettre U</a>
+        <div id="accordion-5" class="accordion-section-content">
+            <table align="center">
+                <thead>  
+                    <tr>
+                        <th>Nom de l'accent</th><th>Lettre</th><th>HTML</th><th>Copier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>u accent grave</td><td>ù</td><td><input type="text" id="textcopy44" value="&amp;ugrave;"></td>
+                        <td><button class="copy" data-id="44">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>U accent grave</td><td>Ù</td><td><input type="text" id="textcopy45" value="&amp;Ugrave;"></td>
+                        <td><button class="copy" data-id="45">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>u accent aigu</td><td>ú</td><td><input type="text" id="textcopy46" value="&amp;uacute;"></td>
+                        <td><button class="copy" data-id="46">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>U accent aigu</td><td>Ú</td><td><input type="text" id="textcopy47" value="&amp;Uacute;"></td>
+                        <td><button class="copy" data-id="47">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>u accent circonflexe</td><td>û</td><td><input type="text" id="textcopy48" value="&amp;ucirc;"></td>
+                        <td><button class="copy" data-id="48">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>U accent circonflexe</td><td>Û</td><td><input type="text" id="textcopy49" value="&amp;Ucirc;"></td>
+                        <td><button class="copy" data-id="49">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>u tréma</td><td>ü</td><td><input type="text" id="textcopy50" value="&amp;uuml;"></td>
+                        <td><button class="copy" data-id="50">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>U tréma</td><td>Ü</td><td><input type="text" id="textcopy51" value="&amp;Uuml;"></td>
+                        <td><button class="copy" data-id="51">Copier</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!--end .accordion-section-content-->
+    </div><!--end .accordion-section-->
+<!--======================================================================================
+==========================================================================================
+=======================================================================================-->
+    <div class="accordion-section">
+        <a class="accordion-section-title" href="#accordion-6">Autres lettres</a>
+        <div id="accordion-6" class="accordion-section-content">
+            <table align="center">
+                <thead>    
+                    <tr>
+                        <th>Nom de l'accent</th><th>Lettre</th><th>HTML</th><th>Copier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>n tilde</td><td>ñ</td><td><input type="text" id="textcopy52" value="&amp;ntilde;"></td>
+                        <td><button class="copy" data-id="52">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>N tilde</td><td>Ñ</td><td><input type="text" id="textcopy53" value="&amp;Ntilde;"></td>
+                        <td><button class="copy" data-id="53">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>c cédille</td><td>ç</td><td><input type="text" id="textcopy54" value="&amp;ccedil;"></td>
+                        <td><button class="copy" data-id="54">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>C cédille </td><td>Ç</td><td><input type="text" id="textcopy55" value="&amp;Ccedil;"></td>
+                        <td><button class="copy" data-id="55">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>y accent aigu</td><td>ý</td><td><input type="text" id="textcopy56" value="&amp;yacute;"></td>
+                        <td><button class="copy" data-id="56">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Y accent aigu</td><td>Ý</td><td><input type="text" id="textcopy57" value="&amp;Yacute;"></td>
+                        <td><button class="copy" data-id="57">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>double s allemand</td><td>ß</td><td><input type="text" id="textcopy58" value="&amp;szlig;"></td>
+                        <td><button class="copy" data-id="58">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>esperluette</td><td>&amp;</td><td><input type="text" id="textcopy59" value="&amp;amp;"></td>
+                        <td><button class="copy" data-id="59">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Omega</td><td>Ω</td><td><input type="text" id="textcopy60" value="&amp;Omega;"></td>
+                        <td><button class="copy" data-id="60">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Icelandic</td><td>Ð</td><td><input type="text" id="textcopy61" value="&amp;ETH;"></td>
+                        <td><button class="copy" data-id="61">Copier</button></td>
+                    </tr>        
+                </tbody>
+            </table>
+        </div><!--end .accordion-section-content-->
+    </div><!--end .accordion-section-->
+<!--======================================================================================
+==========================================================================================
+=======================================================================================-->
+    <div class="accordion-section">
+        <a class="accordion-section-title" href="#accordion-7">Autres signes</a>
+        <div id="accordion-7" class="accordion-section-content">
+            <table align="center">
+                <thead>   
+                    <tr>
+                        <th>Nom de l'accent</th><th>Lettre</th><th>HTML</th><th>Copier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Guillemet français ouvrant</td><td>«</td><td><input type="text" id="textcopy62" value="&amp;laquo;"></td>
+                        <td><button class="copy" data-id="62">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Guillemet français fermant</td><td>»</td><td><input type="text" id="textcopy63" value="&amp;raquo;"></td>
+                        <td><button class="copy" data-id="63">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Inférieur</td><td>&lt;</td><td><input type="text" id="textcopy64" value="&amp;lt;"></td>
+                        <td><button class="copy" data-id="64">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Supérieur</td><td>&lt;</td><td><input type="text" id="textcopy65" value="&amp;gt;"></td>
+                        <td><button class="copy" data-id="65">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Guillemet double</td><td> " </td><td><input type="text" id="textcopy66" value="&amp;quot;"></td>
+                        <td><button class="copy" data-id="66">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Paragraphe</td><td>§</td><td><input type="text" id="textcopy67" value="&amp;para;"></td>
+                        <td><button class="copy" data-id="67">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Copyright</td><td>©</td><td><input type="text" id="textcopy68" value="&amp;copy;"></td>
+                        <td><button class="copy" data-id="68">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Espace blanc</td><td>&nbsp;</td><td><input type="text" id="textcopy69" value="&amp;nbsp;"></td>
+                        <td><button class="copy" data-id="69">Copier</button></td>
+                    </tr>                    
+                    <tr>
+                        <td>Paragraphe</td><td>&#8267;</td><td><input type="text" id="textcopy70" value="&amp;#8267;"></td>
+                        <td><button class="copy" data-id="70">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Environ</td><td>&#8771;</td><td><input type="text" id="textcopy71" value="&amp;#8771;"></td>
+                        <td><button class="copy" data-id="71">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Arobase</td><td>&#64;</td><td><input type="text" id="textcopy72" value="&amp;#64;"></td>
+                        <td><button class="copy" data-id="72">Copier</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!--end .accordion-section-content-->
+    </div><!--end .accordion-section-->
+<!--======================================================================================
+==========================================================================================
+=======================================================================================-->
+    <div class="accordion-section">
+        <a class="accordion-section-title" href="#accordion-8">Monnaies</a>
+        <div id="accordion-8" class="accordion-section-content">
+            <table align="center">
+                <thead>   
+                    <tr>
+                        <th>Nom de l'accent</th><th>Lettre</th><th>HTML</th><th>Copier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Euro</td><td>€</td><td><input type="text" id="textcopy73" value="&amp;#128;"></td>
+                        <td><button class="copy" data-id="73">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Livre</td><td>&#163;</td><td><input type="text" id="textcopy74" value="&amp;#163;"></td>
+                        <td><button class="copy" data-id="74">Copier</button></td>
+                    </tr>
+                    <tr>
+                        <td>Yen</td><td>&#165;</td><td><input type="text" id="textcopy75" value="&amp;#165;"></td>
+                        <td><button class="copy" data-id="75">Copier</button></td>
+                    </tr> 
+                     <tr>
+                        <td>Dollar</td><td>&#36;</td><td><input type="text" id="textcopy76" value="&amp;#36;"></td>
+                        <td><button class="copy" data-id="76">Copier</button></td>
+                    </tr>                     
+                </tbody>
+            </table>
+        </div><!--end .accordion-section-content-->
+    </div><!--end .accordion-section-->
+<!--======================================================================================
+==========================================================================================
+=======================================================================================-->
+    <div class="accordion-section">
+        <a class="accordion-section-title" href="#accordion-9">Raccourci clavier</a>
+        <div id="accordion-9" class="accordion-section-content">
+<p>
+<strong>Á</strong> = alt 181 <strong>Â</strong> = alt 182 <br>
+<strong>À</strong> = alt 183 <strong>Ã</strong> = alt 199 <br>
+<strong>Ç</strong> = alt 128 <strong>È</strong> = alt 212 <br>
+<strong>É</strong> = alt 144 <strong>Ë</strong> = alt 211 <br>
+<strong>Ê</strong> = alt 210 <strong>Ñ</strong> = alt 165 <br>
+<strong>Ö</strong> = alt 153 <strong>Ú</strong> = alt 233 <br>
+<strong>Û</strong> = alt 234 <strong>Ù</strong> = alt 235 <br>
+<strong>Ü</strong> = alt 154 <br>
+<strong>Accent aigu :</strong><br> Ctrl + ' (touche 4 de la ligne du haut du clavier) puis saisir la lettre<br>
+<strong>Accent grave :</strong><br> Ctrl + Alt + ` (touche 7 de la ligne du haut du clavier) puis saisir la lettre
+</p>
+        </div><!--end .accordion-section-content-->
+    </div><!--end .accordion-section-->
+
+
+</div><!--end .accordion-->
+
+</body>
+</html>
